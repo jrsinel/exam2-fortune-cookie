@@ -21,17 +21,59 @@ body {
 .title {
   text-align: center;
   font-weight: bold;
-  font-size: 150%;
+  font-size: 200%;
+  margin-top: 5%;
 }
 
 .cookie {
   position: absolute;
+  margin-top: 3%;
   top: 50%;
   left: 50%;
   width: 50%; /* you can use % */
   height: auto;
   overflow: hidden;
   animation: animate linear 5s infinite;
+}
+
+.result_text {
+  text-align: center;
+  font-weight: bold;
+  font-size: 200%;
+  margin-top: 5%;
+}
+
+.result_cookie {
+  margin-top: 5%;
+  margin-left: 25%;
+  top: 20%;
+  width: 50%; /* you can use % */
+  height: auto;
+  overflow: hidden;
+  height: auto;
+}
+
+.change {
+  text-align: center;
+  font-weight: bold;
+  font-size: 150%;
+  margin-top: 10%;
+}
+
+#id_description {
+  margin-top: 10%;
+}
+
+.change_input {
+  margin-top: 5%;
+}
+
+.form {
+  text-align: center;
+}
+
+.cookie_div {
+  text-align: center;
 }
 
 @keyframes animate {

@@ -19,6 +19,10 @@ urlpatterns = [
         "users/",
         include("fortune_cookie.users.urls", namespace="users"),
     ),
+    path(
+        "cookie/",
+        include("fortune_cookie.pool.urls"),
+    ),
     path("accounts/", include("allauth.urls")),
     # Your stuff: custom urls includes go here
 ] + static(

@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load static i18n %}
+
+{% block content %}
+<div class="result_text">{{ fortune.description }}</div>
+<a href="{% url 'change_fortune' pk=fortune.id %}">
+  <img class="result_cookie" src="{% static 'images/CRACKED-FORTUNE-COOKIE.jpg' %}" alt="Fortune Cookie Result">
+</a>
+<div class="change">Didn't like your fortune? Click the cookie to change it!</div>
+{% endblock content %}

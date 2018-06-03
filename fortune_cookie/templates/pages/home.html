@@ -3,7 +3,7 @@
 
 {% block content %}
 <div class="title">Know what fortune awaits you. Click your fortune cookie!</div>
-<a href="#">
+<a href="{% url 'result' %}">
   <img class="cookie" src="{% static 'images/FORTUNE-COOKIE.jpg' %}" alt="Fortune cookie">
 </a>
 {% endblock content %}
