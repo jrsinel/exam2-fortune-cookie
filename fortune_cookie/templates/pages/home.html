@@ -1,1 +1,9 @@
 {% extends "base.html" %}
+{% load static i18n %}
+
+{% block content %}
+<div class="title">Know what fortune awaits you. Click your fortune cookie!</div>
+<a href="#">
+  <img class="cookie" src="{% static 'images/FORTUNE-COOKIE.jpg' %}" alt="Fortune cookie">
+</a>
+{% endblock content %}

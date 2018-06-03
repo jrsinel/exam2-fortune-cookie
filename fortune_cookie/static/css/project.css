@@ -11,3 +11,37 @@
   background-color: #f2dede;
   border-color: #eed3d7;
 }
+
+/* Custom CSS */
+
+body {
+  background-color: #835C3B;
+}
+
+.title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 150%;
+}
+
+.cookie {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%; /* you can use % */
+  height: auto;
+  overflow: hidden;
+  animation: animate linear 5s infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -50%) skewY(5deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) skewY(-5deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) skewY(5deg);
+  }
+}

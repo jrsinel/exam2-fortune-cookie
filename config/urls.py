@@ -22,7 +22,7 @@ urlpatterns = [
     path("accounts/", include("allauth.urls")),
     # Your stuff: custom urls includes go here
 ] + static(
-    settings.MEDIA_URL, document_root=settings.MEDIA_ROOT
+    settings.STATIC_URL, document_root=settings.STATIC_ROOT
 )
 
 if settings.DEBUG:
