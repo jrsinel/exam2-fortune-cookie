@@ -11,59 +11,65 @@ Exam#2 Fortune Cookie
 :License: MIT
 
 
-Settings
---------
-
-Moved to settings_.
-
-.. _settings: http://cookiecutter-django.readthedocs.io/en/latest/settings.html
-
-Basic Commands
---------------
-
-Setting Up Your Users
-^^^^^^^^^^^^^^^^^^^^^
-
-* To create a **normal user account**, just go to Sign Up and fill out the form. Once you submit it, you'll see a "Verify Your E-mail Address" page. Go to your console to see a simulated email verification message. Copy the link into your browser. Now the user's email should be verified and ready to go.
-
-* To create an **superuser account**, use this command::
-
-    $ python manage.py createsuperuser
-
-For convenience, you can keep your normal user logged in on Chrome and your superuser logged in on Firefox (or similar), so that you can see how the site behaves for both kinds of users.
-
-Test coverage
+Setup
 ^^^^^^^^^^^^^
 
-To run the tests, check your test coverage, and generate an HTML coverage report::
 
-    $ coverage run manage.py test
-    $ coverage html
-    $ open htmlcov/index.html
-
-Running tests with py.test
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-::
-
-  $ py.test
-
-Live reloading and Sass CSS compilation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Moved to `Live reloading and SASS compilation`_.
-
-.. _`Live reloading and SASS compilation`: http://cookiecutter-django.readthedocs.io/en/latest/live-reloading-and-sass-compilation.html
-
-
-
-
-
-Deployment
+Requirements
 ----------
 
-The following details how to deploy this application.
+* Python 3.6.5.
+* Use of virtualenv is advised.
 
 
+Virtualenv Wrapper
+----------
 
+* Install virtualenvwrapper::
+
+  $ pip install virtualenvwrapper
+
+* Create virtualenv, it'll auto activates upon success::
+
+  $ mkvirtualenv exam2
+
+
+Installation
+----------
+
+* Clone from this source::
+
+  https://github.com/jrsinel/exam2-fortune-cookie.git
+
+* Install necessary packages of the project::
+
+  $ pip install requirements/local.txt
+
+* Create DB::
+
+  $ python manage.py migrate
+
+* Supply initial data::
+
+  $ python manage.py loaddata fortune_cookie/fixtures/initial_users.json
+  $ python manage.py loaddata fortune_cookie/fixtures/initial_seed_fortunes.json
+
+* Runserver::
+
+  $ python manage.py runserver
+
+* Check if it works, access::
+
+  http://localhost:8000/
+
+* To check the seed fortunes, go to::
+
+  http://localhost:8000/admin/pool/seedfortune/
+
+
+Initial Credentials
+----------
+
+username: admin
+password: admin1234!
 
