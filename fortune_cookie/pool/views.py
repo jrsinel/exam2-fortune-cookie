@@ -31,9 +31,9 @@ class FortuneUpdate(SuccessMessageMixin, UpdateView):
     Generic update class
     """
     model = SeedFortune
-    fields = ['description']
-    template_name_suffix = '_update_form'
-    success_message = 'Congrats! You have successfully made your own fortune.'
+    fields = ["description"]
+    template_name_suffix = "_update_form"
+    success_message = "Congrats! You have successfully made your own fortune."
 
     def get_success_url(self):
         """
@@ -41,5 +41,4 @@ class FortuneUpdate(SuccessMessageMixin, UpdateView):
         :return:
         """
 
-        print ("PKish :{}".format(self.get_object().id))
-        return reverse("change_fortune", args=(self.get_object().id,))
+        return reverse("change_fortune", kwargs={"pk": self.get_object().id})
