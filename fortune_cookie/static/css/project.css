@@ -18,6 +18,12 @@ body {
   background-color: #835C3B;
 }
 
+a {
+  color: white;
+  font-weight: bold;
+  font-size: 100%;
+}
+
 /* homepage */
 
 .title {
@@ -63,6 +69,8 @@ body {
   height: auto;
 }
 
+/* change fortune */
+
 .change {
   text-align: center;
   font-weight: bold;
@@ -80,6 +88,13 @@ body {
 
 .form {
   text-align: center;
+}
+
+.message {
+  text-align: center;
+  font-weight: bold;
+  font-size: 120%;
+  margin-top: 5%;
 }
 
 @keyframes animate {

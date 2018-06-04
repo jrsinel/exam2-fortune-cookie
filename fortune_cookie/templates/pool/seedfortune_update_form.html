@@ -2,6 +2,16 @@
 {% load static i18n %}
 
 {% block content %}
+<div class="message">
+  {% for message in messages %}
+    {{ message }}
+  {% endfor %}
+</div>
+
+<div class="form">
+  <a href="{% url 'home' %}">Try again?</a>
+</div>
+
 <form method="post">{% csrf_token %}
     <div class="form">
       {{ form.description }}
