@@ -43,7 +43,7 @@ Installation
 
 * Install necessary packages of the project::
 
-  $ pip install requirements/local.txt
+  $ pip install -r requirements/local.txt
 
 * Create DB::
 
@@ -71,5 +71,6 @@ Initial Credentials
 ----------
 
 username: admin
+
 password: admin1234!
 
